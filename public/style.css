@@ -1,0 +1,116 @@
+.black-50 {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.object-cover {
+    object-fit: cover !important   ;
+}
+
+.object-contain {
+    object-fit: contain !important   ;
+}
+.text-sm {
+    font-size: 0.8rem !important;
+}
+.text-md {
+    font-size: 0.9rem !important;
+}
+
+.transition-slow {
+    transition: all 2s !important;
+}
+.transition-md {
+    transition: all 0.9s !important;
+}
+.transition-fast {
+    transition: all 0.4s !important;
+}
+
+.height-full {
+    height: 100vh !important;
+}
+
+.clip-circle {
+    clip-path: circle() !important;
+}
+.y-scroll {
+    overflow-y: scroll !important;
+}
+
+.translate-nx-100 {
+    transform: translateX(-100%);
+}
+.translate-px-100 {
+    transform: translateX(100%);
+}
+
+.cursor-pointer {
+    cursor: pointer !important;
+}
+
+.scale-0 {
+    scale: 0;
+}
+
+.display-none {
+    display: none;
+}
+
+.hero {
+    background-image: url("https://plus.unsplash.com/premium_photo-1685656440548-d8cad874d5d8?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGF0dGVybiUyMHdhbGxwYXBlcnxlbnwwfHwwfHx8MA%3D%3D");
+    background-position: center center;
+    background-size: cover;
+}
+
+.active {
+    position: relative;
+    color: black !important;
+}
+
+.active::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    bottom: -5px;
+    left: 0;
+}
+
+.gig-card img {
+    height: 150px;
+    object-fit: cover;
+}
+
+.gig-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.profile-overview {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.tab-content {
+    margin-top: 20px;
+}
+
+.create-gig {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #ddd;
+    height: 250px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.create-gig:hover {
+    background-color: #f1f1f1;
+}
+
+.w-max {
+    width: max-content !important ;
+}

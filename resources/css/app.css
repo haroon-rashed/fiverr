@@ -1,0 +1,355 @@
+@import "tailwindcss";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+}
+.header-container {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-pic {
+    background: linear-gradient(135deg, #ffbe5d, #ff8a5c);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+}
+
+.search-container input {
+    border-radius: 20px;
+    padding: 8px 20px;
+    border: 1px solid #ddd;
+}
+
+.search-container button {
+    border-radius: 20px;
+    padding: 8px 20px;
+}
+
+.navbar-icons i {
+    color: #555;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.navbar-icons i:hover {
+    color: #1dbf73;
+}
+
+.navbar-orders {
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.navbar-orders:hover {
+    color: #1dbf73 !important;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #555;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background: #fff;
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    z-index: 9999;
+    overflow-y: auto;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar p {
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.sidebar p:hover {
+    background-color: #f5f5f5;
+    color: #1dbf73;
+}
+
+.sidebar .badge {
+    font-size: 0.7rem;
+    padding: 3px 6px;
+}
+
+.sidebar-close {
+    font-size: 1.5rem;
+    color: #555;
+    cursor: pointer;
+}
+
+.sidebar-close:hover {
+    color: #ff0000;
+}
+
+@media (max-width: 992px) {
+    .navbar-icons,
+    .navbar-orders {
+        display: none !important;
+    }
+    .menu-icon {
+        display: block !important;
+    }
+    .profile-pic {
+        display: block !important;
+    }
+}
+
+@media (max-width: 580px) {
+    .header-container {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+    .logo-menu-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    .search-container {
+        order: 3;
+        width: 100% !important;
+        margin-top: 10px;
+    }
+    .profile-pic {
+        order: 2;
+        margin-left: auto;
+    }
+}
+
+.underlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+.under_lay {
+    position: fixed;
+    z-index: 9998; /* must be lower than sidebar’s 9999 */
+}
+
+/* Hero Section */
+
+body {
+    background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    color: white;
+}
+
+.main-container {
+    padding: 60px 20px;
+}
+
+.header-section {
+    margin-bottom: 50px;
+}
+
+.main-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    color: #b0b0b0;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+.start-btn {
+    background: white;
+    color: #2c2c2c;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.start-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+    color: #2c2c2c;
+}
+
+.card-container {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: 100%;
+    z-index: ;
+}
+
+.card-header {
+    font-size: 0.9rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.card-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.card-description {
+    color: #b0b0b0;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.card-btn {
+    background: transparent;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.card-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: white;
+    transform: translateY(-1px);
+}
+
+.briefcase-icon::before {
+    content: "📄";
+    font-size: 24px;
+}
+
+.suitcase-icon::before {
+    content: "💼";
+    font-size: 24px;
+}
+
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+    }
+
+    .card-container {
+        padding: 25px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Dashboard */
+
+body {
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+}
+.sidebar {
+    border-right: 1px solid #ddd;
+    height: 100vh;
+    padding: 20px;
+}
+.profile-avatar {
+    width: 60px;
+    height: 60px;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px auto;
+}
+.profile-name {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.verify-alert {
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.verify-btn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 4px;
+}
+.dashboard-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.card {
+    border: 1px solid #ddd;
+}
+.order-summary {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Footer dashboard */
+
