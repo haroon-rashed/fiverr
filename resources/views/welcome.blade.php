@@ -51,6 +51,8 @@
     <div class="row p-3">
 
       <!-- Static gig card 1 -->
+      @foreach ($gigs as $gig)
+          
       <div class="col-lg-3 col-md-4 col-sm-6 my-2">
         <a href="#" class="card text-decoration-none shadow-lg rounded-3 border-0">
           <img class="rounded-3 rounded-bottom-0" width="100%" height="200px" style="object-fit: cover" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?fit=crop&w=800&q=60" alt="Gig 1">
@@ -71,29 +73,8 @@
           </div>
         </a>
       </div>
-
-      <!-- Static gig card 2 -->
-      <div class="col-lg-3 col-md-4 col-sm-6 my-2">
-        <a href="#" class="card text-decoration-none shadow-lg rounded-3 border-0">
-          <img class="rounded-3 rounded-bottom-0" width="100%" height="200px" style="object-fit: cover" src="https://images.unsplash.com/photo-1590608897129-79da63e76b6d?fit=crop&w=800&q=60" alt="Gig 2">
-          <div class="py-4 px-2">
-            <div class="d-flex gap-2 align-items-center">
-              <div class="img user-image">
-                <img src="https://randomuser.me/api/portraits/women/2.jpg" width="20" height="20" class="rounded-circle border border-success" alt="user image">
-              </div>
-              <h6 class="username m-0 text-capitalize">jane_smith</h6>
-            </div>
-            <p class="text-secondary-emphasis fw-semibold my-2">
-              I will design modern UI/UX for your mobile app or website.
-            </p>
-            <div class="d-flex">
-              ⭐ <span class="fw-bolder">4.9</span> <span class="text-secondary">(17)</span>
-            </div>
-            <h6>From $220</h6>
-          </div>
-        </a>
-      </div>
-
+      
+      @endforeach
       <!-- More static cards can be added here if needed -->
 
     </div>
