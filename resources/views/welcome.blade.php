@@ -54,17 +54,17 @@
       @foreach ($gigs as $gig)
           
       <div class="col-lg-3 col-md-4 col-sm-6 my-2">
-        <a href="#" class="card text-decoration-none shadow-lg rounded-3 border-0">
-          <img class="rounded-3 rounded-bottom-0" width="100%" height="200px" style="object-fit: cover" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?fit=crop&w=800&q=60" alt="Gig 1">
+        <a href="/seller/single-gig/{{$gig->id}}" class="card text-decoration-none shadow-lg rounded-3 border-0">
+          <img class="rounded-3 rounded-bottom-0" width="100%" height="200px" style="object-fit: cover" src="{{ asset('/storage/'. $gig->images) }}" alt="Gig 1">
           <div class="py-4 px-2">
             <div class="d-flex gap-2 align-items-center">
               <div class="img user-image">
-                <img src="https://randomuser.me/api/portraits/men/1.jpg" width="20" height="20" class="rounded-circle border border-success" alt="user image">
+                <img src="{{ asset('/storage/'. $gig->images) }}" width="20" height="20" class="rounded-circle border border-success" alt="user image">
               </div>
               <h6 class="username m-0 text-capitalize">john_doe</h6>
             </div>
             <p class="text-secondary-emphasis fw-semibold my-2">
-              I will build a responsive WordPress website for your business.
+              {{ $gig->description }}
             </p>
             <div class="d-flex">
               ⭐ <span class="fw-bolder">5.0</span> <span class="text-secondary">(24)</span>

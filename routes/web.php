@@ -12,6 +12,7 @@ Route::get('/', [GigController::class, 'gitGigs'])->name('gigs');
 Route::prefix('seller')->group(function () {
 Route::view('/dashboard', 'seller.pages.dashboard')->name('seller-dashboard'); 
     Route::view('/gigs', 'seller.pages.gigs')->name('seller-gigs');
+    Route::view('/single-gig/{id}', 'seller.pages.single-gig')->name('seller-single-gig');
     Route::view('/create-gigs', 'seller.pages.create-gig')->name('seller-add-gigs');
 
 
@@ -20,7 +21,7 @@ Route::view('/dashboard', 'seller.pages.dashboard')->name('seller-dashboard');
     //get routes
 
     Route::get('/create-gigs', [GigController::class, 'getCategories'])->name('seller-get-categories');
-
+    Route::get('/get-single-gig/{id}', [GigController::class, 'getSingleGig'])->name('seller-get-single-gig');
 
     //post routes
     Route::post('/get-relevant-values', [GigController::class,  'getReleventValues'])->name('seller-get-relevent-values');

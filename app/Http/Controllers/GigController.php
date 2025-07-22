@@ -32,7 +32,6 @@ class GigController extends Controller
                 return response()->json([], 404);
             }
             
-            // Decode JSON into PHP array
             $arr = json_decode($find_val, true);
             
             Log::info('Decoded values:', ['values' => $arr]);
@@ -89,4 +88,9 @@ public function gitGigs(){
     return view('welcome', compact('gigs'));
 }
 
+public function getSingleGig($id)
+{
+    $findGig = Gig::find($id);
+    return response()->json($findGig);
+}
 }
