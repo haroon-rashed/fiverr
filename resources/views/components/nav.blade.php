@@ -22,7 +22,7 @@
         <i class="bi bi-envelope"></i>
         <i class="bi bi-heart"></i>
     </div>
-    {{-- @auth
+     @auth
         <h6 class="fw-semibold d-none d-md-flex text-success" style="width:max-content;white-space: nowrap">Switch to
             selling</h6>
     @endauth
@@ -41,6 +41,6 @@
             src="https://plus.unsplash.com/premium_photo-1683121366070-5ceb7e007a97?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"
             width="30px" height="30px" class="rounded-circle border d-none d-md-flex border-success" alt="user image">
         <h6 style="white-space: nowrap">{{ auth()->user()->name }}</h6>
-    @endauth --}}
+    @endauth -
 
 </div>
